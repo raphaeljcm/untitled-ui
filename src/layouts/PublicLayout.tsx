@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom';
+import { Sidebar } from '@/Sidebar';
 
-export default function PublicLayout() {
+export function PublicLayout() {
   return (
     <div className="grid min-h-screen grid-cols-app font-inter">
-      <aside className="border-r border-zinc-200 px-5 py-8">sidebar</aside>
+      <Sidebar />
 
       <main className="px-4 pb-12 pt-8">
         <Outlet />

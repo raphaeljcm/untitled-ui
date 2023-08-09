@@ -1,22 +1,16 @@
 import { Suspense, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
-const App = lazy(() => import('./App'));
+import { PublicLayout } from './layouts/PublicLayout';
+import { App } from './App';
+import { Loading } from '@/Loading';
 const Home = lazy(() => import('./pages/Home'));
-const PublicLayout = lazy(() => import('./layouts/PublicLayout'));
-
-const FALLBACK_LOADING_STYLE = {
-  height: '100vh',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-};
 
 export function Router() {
   return (
-    <Suspense fallback={<div style={FALLBACK_LOADING_STYLE}>Loading...</div>}>
+    <Suspense fallback={<Loading />}>
       <Routes>
         <Route element={<PublicLayout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route index element={<App />} />
         </Route>
       </Routes>
