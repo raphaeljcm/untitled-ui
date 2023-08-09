@@ -1,6 +1,12 @@
+import { Link } from 'react-router-dom';
+import { APP_ROUTES } from 'src/consts/routes';
+
 export function Logo() {
   return (
-    <strong className="flex items-center gap-2 text-xl font-semibold text-zinc-900">
+    <Link
+      to={APP_ROUTES.APP}
+      className="mx-1 flex items-center gap-2 text-xl font-semibold text-zinc-900"
+    >
       <svg
         width={38}
         height={38}
@@ -204,6 +210,6 @@ export function Logo() {
         </defs>
       </svg>
       <span>Untitled UI</span>
-    </strong>
+    </Link>
   );
 }
