@@ -42,9 +42,7 @@ const SETTINGS_TABS = [
     value: 'api',
     title: 'API',
   },
-] as const;
-
-export type SettingTabValue = (typeof SETTINGS_TABS)[number]['value'];
+];
 
 export default function Settings() {
   return (
