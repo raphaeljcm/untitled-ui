@@ -1,5 +1,5 @@
 const FALLBACK_LOADING_STYLE = {
-  height: '100vh',
+  height: '100%',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
