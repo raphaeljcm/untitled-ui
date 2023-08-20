@@ -1,3 +1,5 @@
+import { Header } from '@/Header';
+
 export default function Home() {
-  return <div>Home</div>;
+  return <Header title="Home" />;
 }
