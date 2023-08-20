@@ -23,7 +23,7 @@ export function NavItem({ title, icon: Icon, to }: NavItemProps) {
         <>
           <Icon className="h-5 w-5 text-zinc-500" />
           <span
-            className="text-zinc-70 font-medium transition-colors data-[active=true]:text-violet-500"
+            className="font-medium text-zinc-700 transition-colors data-[active=true]:text-violet-500"
             data-active={String(isActive)}
           >
             {title}
