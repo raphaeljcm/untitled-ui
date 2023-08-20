@@ -21,16 +21,19 @@ export function NavItem({ title, icon: Icon, to }: NavItemProps) {
     >
       {({ isActive }) => (
         <>
-          <Icon className="h-5 w-5 text-zinc-500" />
+          <Icon
+            className="h-5 w-5 text-zinc-500 data-[active=true]:text-violet-500"
+            data-active={isActive}
+          />
           <span
             className="font-medium text-zinc-700 transition-colors data-[active=true]:text-violet-500"
-            data-active={String(isActive)}
+            data-active={isActive}
           >
             {title}
           </span>
           <ChevronDown
-            className="ml-auto h-5 w-5 text-zinc-400 transition-colors data-[active=true]:text-violet-300"
-            data-active={String(isActive)}
+            className="ml-auto h-5 w-5 text-zinc-400 transition-colors data-[active=true]:text-violet-500"
+            data-active={isActive}
           />
         </>
       )}
