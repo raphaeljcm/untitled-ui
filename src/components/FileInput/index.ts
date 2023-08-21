@@ -1,5 +1,6 @@
 import { FileInputControl } from './Control';
 import { FileInputImagePreview } from './ImagePreview';
+import { FileInputList } from './List';
 import { FileInputRoot } from './Root';
 import { FileInputTrigger } from './Trigger';
 
@@ -8,4 +9,5 @@ export const FileInput = {
   Trigger: FileInputTrigger,
   ImagePreview: FileInputImagePreview,
   Control: FileInputControl,
+  List: FileInputList,
 };

@@ -153,6 +153,7 @@ export default function Settings() {
 
             <FileInput.Root>
               <FileInput.Trigger />
+              <FileInput.List />
               <FileInput.Control multiple />
             </FileInput.Root>
           </div>
