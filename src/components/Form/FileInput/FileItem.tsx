@@ -36,7 +36,7 @@ const fileItem = tv({
 });
 
 export function FileInputItem({ file, state, ...rest }: FileInputItemProps) {
-  const { onFileRemoved } = useFileInput();
+  const { onFileRemoved, id } = useFileInput();
   const { container, icon, deleteButton } = fileItem({ state });
 
   const handleRemoveFile = (file: File) => onFileRemoved(file);
@@ -57,10 +57,15 @@ export function FileInputItem({ file, state, ...rest }: FileInputItemProps) {
           </div>
 
           <button
+            className="group rounded-lg text-sm font-semibold text-error-700 outline-none hover:text-error-900 focus-visible:border-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-4"
             type="button"
-            className="text-sm font-semibold text-error-700 hover:text-error-900"
           >
-            Try again
+            <label
+              htmlFor={id}
+              className="cursor-pointer group-hover:cursor-pointer"
+            >
+              Try again
+            </label>
           </button>
         </div>
       ) : (
