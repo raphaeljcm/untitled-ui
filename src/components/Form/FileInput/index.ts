@@ -1,6 +1,6 @@
 import { FileInputControl } from './Control';
 import { FileInputImagePreview } from './ImagePreview';
-import { FileInputList } from './List';
+import { FileInputList } from './FileList';
 import { FileInputRoot } from './Root';
 import { FileInputTrigger } from './Trigger';
 
