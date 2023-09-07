@@ -6,7 +6,7 @@ export function PublicLayout() {
     <div className="grid h-screen grid-cols-app font-inter">
       <Sidebar />
 
-      <main className="overflow-y-scroll px-8 pb-12 pt-8">
+      <main className="px-4 pb-12 pt-24 lg:col-start-2 lg:px-8 lg:pt-8">
         <Outlet />
       </main>
     </div>
