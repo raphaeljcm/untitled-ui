@@ -1,4 +1,5 @@
 import * as RadixTabs from '@radix-ui/react-tabs';
+import * as RadixScrollArea from '@radix-ui/react-scroll-area';
 import { TabItem } from './TabItem';
 import { useState } from 'react';
 
@@ -14,16 +15,27 @@ export function Tabs({ tabs }: TabsProps) {
 
   return (
     <RadixTabs.Root value={currentTab} onValueChange={setCurrentTab}>
-      <RadixTabs.List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200">
-        {tabs.map(tab => (
-          <TabItem
-            key={tab.value}
-            title={tab.title}
-            value={tab.value}
-            isSelected={currentTab === tab.value}
-          />
-        ))}
-      </RadixTabs.List>
+      <RadixScrollArea.Root type="scroll" className="w-full">
+        <RadixScrollArea.Viewport className="w-full overflow-x-scroll">
+          <RadixTabs.List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200">
+            {tabs.map(tab => (
+              <TabItem
+                key={tab.value}
+                title={tab.title}
+                value={tab.value}
+                isSelected={currentTab === tab.value}
+              />
+            ))}
+          </RadixTabs.List>
+        </RadixScrollArea.Viewport>
+
+        <RadixScrollArea.Scrollbar
+          orientation="horizontal"
+          className="flex h-0.5 translate-y-1.5 touch-none select-none flex-col bg-zinc-100"
+        >
+          <RadixScrollArea.Thumb className="relative flex-1 rounded-lg bg-zinc-300" />
+        </RadixScrollArea.Scrollbar>
+      </RadixScrollArea.Root>
     </RadixTabs.Root>
   );
 }
