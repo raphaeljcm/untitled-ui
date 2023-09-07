@@ -3,5 +3,9 @@ interface HeaderProps {
 }
 
 export function Header({ title }: HeaderProps) {
-  return <h1 className="text-3xl font-medium text-zinc-900">{title}</h1>;
+  return (
+    <h1 className="text-3xl font-medium text-zinc-900 dark:text-zinc-100">
+      {title}
+    </h1>
+  );
 }

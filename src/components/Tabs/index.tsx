@@ -17,7 +17,7 @@ export function Tabs({ tabs }: TabsProps) {
     <RadixTabs.Root value={currentTab} onValueChange={setCurrentTab}>
       <RadixScrollArea.Root type="scroll" className="w-full">
         <RadixScrollArea.Viewport className="w-full overflow-x-scroll">
-          <RadixTabs.List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200">
+          <RadixTabs.List className="mt-6 flex w-full items-center gap-4 border-b border-zinc-200 dark:border-zinc-700">
             {tabs.map(tab => (
               <TabItem
                 key={tab.value}

@@ -10,9 +10,11 @@ export function UsedSpaceWidget() {
         </p>
       </div>
 
-      <div className="h-2 rounded-full bg-violet-100 dark:bg-zinc-600">
-        <div className="h-2 w-4/5 rounded-full bg-violet-600 dark:bg-violet-400" />
-      </div>
+      <progress
+        className="h-2 w-full [&::-webkit-progress-bar]:rounded-full [&::-webkit-progress-bar]:bg-zinc-100 [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-value]:bg-violet-600 dark:[&::-webkit-progress-value]:bg-violet-400"
+        value="80"
+        max="100"
+      />
 
       <div className="space-x-3">
         <button
